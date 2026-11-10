@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="fxBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F181D"/>
+      <stop offset="60%" stop-color="#2D2329"/>
+      <stop offset="100%" stop-color="#3A2932"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#fxBg)"/>
+  
+  <!-- Outer Window Frame -->
+  <rect x="40" y="35" width="720" height="430" rx="14" fill="#251E23" stroke="#C49A80" stroke-width="1.2"/>
+  
+  <!-- Browser Header -->
+  <rect x="40" y="35" width="720" height="48" rx="14" fill="#1B1519"/>
+  <circle cx="68" cy="59" r="6" fill="#722F45"/>
+  <circle cx="88" cy="59" r="6" fill="#C49A80"/>
+  <circle cx="108" cy="59" r="6" fill="#E9DFD5"/>
+  <rect x="140" y="49" width="300" height="20" rx="4" fill="#2E2429"/>
+  <text x="155" y="63" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">fixitcampus.internal/report-track</text>
+
+  <!-- Top Workflow Stepper Strip -->
+  <rect x="65" y="100" width="670" height="50" rx="8" fill="#1D171B" stroke="#722F45" stroke-width="0.8"/>
+  <text x="85" y="130" font-family="'Playfair Display', serif" font-weight="700" font-size="16" fill="#F8F3EA">FixIt Campus</text>
+  
+  <rect x="230" y="112" width="130" height="26" rx="13" fill="#722F45"/>
+  <text x="295" y="129" font-family="'DM Sans', sans-serif" font-weight="700" font-size="11" fill="#F8F3EA" text-anchor="middle">1. Report Issue</text>
+
+  <text x="385" y="129" font-family="'DM Sans', sans-serif" font-size="14" fill="#C49A80">→</text>
+
+  <rect x="415" y="112" width="130" height="26" rx="13" fill="#30282A" stroke="#C49A80" stroke-width="1"/>
+  <text x="480" y="129" font-family="'DM Sans', sans-serif" font-weight="700" font-size="11" fill="#C49A80" text-anchor="middle">2. Track Geolocation</text>
+
+  <text x="570" y="129" font-family="'DM Sans', sans-serif" font-size="14" fill="#C49A80">→</text>
+
+  <rect x="600" y="112" width="115" height="26" rx="13" fill="#30282A" stroke="#722F45" stroke-width="1"/>
+  <text x="657" y="129" font-family="'DM Sans', sans-serif" font-weight="700" font-size="11" fill="#E9DFD5" text-anchor="middle">3. Resolve</text>
+
+  <!-- Left: Interactive Leaflet Campus Map Simulation -->
+  <rect x="65" y="165" width="370" height="275" rx="8" fill="#171215" stroke="#722F45" stroke-width="0.8"/>
+  
+  <!-- Map Grid and paths -->
+  <line x1="85" y1="220" x2="415" y2="220" stroke="#3A2D35" stroke-width="1.5"/>
+  <line x1="85" y1="310" x2="415" y2="310" stroke="#3A2D35" stroke-width="1.5"/>
+  <line x1="160" y1="180" x2="160" y2="420" stroke="#3A2D35" stroke-width="1.5"/>
+  <line x1="280" y1="180" x2="280" y2="420" stroke="#3A2D35" stroke-width="1.5"/>
+
+  <!-- Campus Buildings -->
+  <rect x="180" y="240" width="80" height="50" rx="4" fill="#2E232A" stroke="#722F45" stroke-width="1"/>
+  <text x="220" y="270" font-family="'DM Sans', sans-serif" font-size="10" fill="#E9DFD5" text-anchor="middle">CS Block</text>
+
+  <rect x="300" y="330" width="90" height="60" rx="4" fill="#2E232A" stroke="#722F45" stroke-width="1"/>
+  <text x="345" y="365" font-family="'DM Sans', sans-serif" font-size="10" fill="#E9DFD5" text-anchor="middle">Lab Annex</text>
+
+  <!-- Geolocation Map Pins -->
+  <circle cx="210" cy="235" r="9" fill="#722F45"/>
+  <circle cx="210" cy="235" r="4" fill="#FFFFFF"/>
+  <rect x="150" y="195" width="120" height="24" rx="4" fill="#211B20" stroke="#722F45" stroke-width="1"/>
+  <text x="210" y="211" font-family="'DM Sans', sans-serif" font-size="9" fill="#F8F3EA" text-anchor="middle">Fault: Projector #3</text>
+
+  <circle cx="330" cy="325" r="9" fill="#C49A80"/>
+  <circle cx="330" cy="325" r="4" fill="#211B20"/>
+
+  <rect x="80" y="405" width="140" height="22" rx="4" fill="#211B20" stroke="#C49A80" stroke-width="0.8"/>
+  <text x="150" y="420" font-family="'DM Sans', sans-serif" font-size="9" fill="#C49A80" text-anchor="middle">Leaflet Map Visualization</text>
+
+  <!-- Right: Issue Status Management & Recharts Bar Breakdown -->
+  <rect x="450" y="165" width="285" height="275" rx="8" fill="#1D171B" stroke="#722F45" stroke-width="0.8"/>
+  <text x="470" y="195" font-family="'DM Sans', sans-serif" font-weight="700" font-size="13" fill="#F8F3EA">Resolution Analytics</text>
+  <text x="470" y="213" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Status Breakdown via Recharts</text>
+
+  <!-- Recharts simulated bar chart -->
+  <rect x="470" y="235" width="245" height="90" rx="6" fill="#151013"/>
+  <!-- Bar 1: Reported -->
+  <rect x="500" y="260" width="24" height="50" rx="3" fill="#722F45"/>
+  <text x="512" y="322" font-family="'DM Sans', sans-serif" font-size="9" fill="#E9DFD5" text-anchor="middle">Rep</text>
+
+  <!-- Bar 2: In Progress -->
+  <rect x="550" y="245" width="24" height="65" rx="3" fill="#C49A80"/>
+  <text x="562" y="322" font-family="'DM Sans', sans-serif" font-size="9" fill="#E9DFD5" text-anchor="middle">Prog</text>
+
+  <!-- Bar 3: Resolved -->
+  <rect x="600" y="238" width="24" height="72" rx="3" fill="#10B981"/>
+  <text x="612" y="322" font-family="'DM Sans', sans-serif" font-size="9" fill="#E9DFD5" text-anchor="middle">Res</text>
+
+  <!-- Bar 4: Escalated -->
+  <rect x="650" y="280" width="24" height="30" rx="3" fill="#30282A" stroke="#722F45" stroke-width="1"/>
+  <text x="662" y="322" font-family="'DM Sans', sans-serif" font-size="9" fill="#E9DFD5" text-anchor="middle">Esc</text>
+
+  <!-- Issue Ticket Preview -->
+  <rect x="470" y="340" width="245" height="85" rx="6" fill="#261E23" stroke="#722F45" stroke-width="0.8"/>
+  <div class="space-y-1">
+    <text x="485" y="362" font-family="'DM Sans', sans-serif" font-weight="700" font-size="11" fill="#F8F3EA">Ticket #FX-104: Lab 2 AC Unit</text>
+    <text x="485" y="380" font-family="'DM Sans', sans-serif" font-size="10" fill="#10B981">Status: In Progress (Assigned)</text>
+    <text x="485" y="398" font-family="'DM Sans', sans-serif" font-size="9" fill="#C49A80">Location: CS Dept • Geotagged</text>
+    <text x="485" y="414" font-family="'DM Sans', sans-serif" font-size="9" fill="#E9DFD5">Reported by Student • 2 hrs ago</text>
+  </div>
+</svg>

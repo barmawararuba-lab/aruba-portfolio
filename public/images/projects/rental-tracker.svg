@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="rtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B161A"/>
+      <stop offset="50%" stop-color="#261E24"/>
+      <stop offset="100%" stop-color="#34222B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#rtBg)"/>
+  
+  <!-- Outer Window Frame -->
+  <rect x="40" y="35" width="720" height="430" rx="14" fill="#221A20" stroke="#C49A80" stroke-width="1.2"/>
+  
+  <!-- Header Bar -->
+  <rect x="40" y="35" width="720" height="48" rx="14" fill="#181317"/>
+  <circle cx="68" cy="59" r="6" fill="#722F45"/>
+  <circle cx="88" cy="59" r="6" fill="#C49A80"/>
+  <circle cx="108" cy="59" r="6" fill="#E9DFD5"/>
+  <rect x="140" y="49" width="300" height="20" rx="4" fill="#2A2127"/>
+  <text x="155" y="63" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">rental-tracker.app/dashboard</text>
+
+  <!-- Sidebar -->
+  <rect x="65" y="100" width="160" height="345" rx="8" fill="#181216" stroke="#722F45" stroke-width="0.8"/>
+  <text x="85" y="130" font-family="'DM Sans', sans-serif" font-weight="700" font-size="14" fill="#F8F3EA">Rental Tracker</text>
+  
+  <rect x="75" y="150" width="140" height="28" rx="6" fill="#722F45"/>
+  <text x="95" y="168" font-family="'DM Sans', sans-serif" font-weight="700" font-size="11" fill="#F8F3EA">Properties &amp; Units</text>
+
+  <rect x="75" y="185" width="140" height="28" rx="6" fill="transparent"/>
+  <text x="95" y="203" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">Tenants Directory</text>
+
+  <rect x="75" y="220" width="140" height="28" rx="6" fill="transparent"/>
+  <text x="95" y="238" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">Payment Ledger</text>
+
+  <rect x="75" y="255" width="140" height="28" rx="6" fill="transparent"/>
+  <text x="95" y="273" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">Occupancy Calendar</text>
+
+  <!-- Main Panel -->
+  <rect x="245" y="100" width="490" height="345" rx="8" fill="#1A1418" stroke="#722F45" stroke-width="0.8"/>
+  
+  <!-- Metric KPI Cards -->
+  <rect x="265" y="120" width="140" height="60" rx="6" fill="#251C22" stroke="#722F45" stroke-width="0.8"/>
+  <text x="280" y="142" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Total Properties</text>
+  <text x="280" y="168" font-family="'Playfair Display', serif" font-weight="700" font-size="20" fill="#F8F3EA">12 Units</text>
+
+  <rect x="420" y="120" width="140" height="60" rx="6" fill="#251C22" stroke="#722F45" stroke-width="0.8"/>
+  <text x="435" y="142" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Occupancy Rate</text>
+  <text x="435" y="168" font-family="'Playfair Display', serif" font-weight="700" font-size="20" fill="#10B981">91.6%</text>
+
+  <rect x="575" y="120" width="140" height="60" rx="6" fill="#251C22" stroke="#722F45" stroke-width="0.8"/>
+  <text x="590" y="142" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Monthly Revenue</text>
+  <text x="590" y="168" font-family="'Playfair Display', serif" font-weight="700" font-size="18" fill="#F8F3EA">Rent Tracked</text>
+
+  <!-- Property & Unit Table -->
+  <rect x="265" y="195" width="450" height="150" rx="6" fill="#21181F" stroke="#722F45" stroke-width="0.8"/>
+  <text x="285" y="222" font-family="'DM Sans', sans-serif" font-weight="700" font-size="12" fill="#F8F3EA">Unit Portfolio &amp; Lease Status (PostgreSQL/Prisma)</text>
+
+  <!-- Row 1 -->
+  <rect x="285" y="235" width="410" height="28" rx="4" fill="#2A1F26"/>
+  <text x="295" y="253" font-family="'DM Sans', sans-serif" font-size="11" fill="#F8F3EA">Unit 101 — Sunset Heights</text>
+  <text x="490" y="253" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Tenant: R. Sharma</text>
+  <rect x="620" y="240" width="65" height="18" rx="3" fill="#10B981" fill-opacity="0.3"/>
+  <text x="652" y="253" font-family="'DM Sans', sans-serif" font-weight="700" font-size="9" fill="#10B981" text-anchor="middle">Occupied</text>
+
+  <!-- Row 2 -->
+  <rect x="285" y="270" width="410" height="28" rx="4" fill="#221920"/>
+  <text x="295" y="288" font-family="'DM Sans', sans-serif" font-size="11" fill="#F8F3EA">Unit 204 — Palm Residency</text>
+  <text x="490" y="288" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Tenant: A. Patel</text>
+  <rect x="620" y="275" width="65" height="18" rx="3" fill="#10B981" fill-opacity="0.3"/>
+  <text x="652" y="288" font-family="'DM Sans', sans-serif" font-weight="700" font-size="9" fill="#10B981" text-anchor="middle">Occupied</text>
+
+  <!-- Row 3 -->
+  <rect x="285" y="305" width="410" height="28" rx="4" fill="#221920"/>
+  <text x="295" y="323" font-family="'DM Sans', sans-serif" font-size="11" fill="#F8F3EA">Unit 305 — Garden Villa</text>
+  <text x="490" y="323" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Vacant / Available</text>
+  <rect x="620" y="310" width="65" height="18" rx="3" fill="#722F45"/>
+  <text x="652" y="323" font-family="'DM Sans', sans-serif" font-weight="700" font-size="9" fill="#F8F3EA" text-anchor="middle">Vacant</text>
+
+  <!-- Recharts revenue chart strip -->
+  <rect x="265" y="358" width="450" height="70" rx="6" fill="#1F171D" stroke="#722F45" stroke-width="0.8"/>
+  <text x="285" y="380" font-family="'DM Sans', sans-serif" font-size="10" fill="#C49A80">Payment Analytics (Recharts) • Cloudinary Media Integration</text>
+  <!-- Mini chart line -->
+  <polyline points="285,415 340,405 400,395 460,402 520,390 580,385 640,380 700,382" fill="none" stroke="#C49A80" stroke-width="2"/>
+  <circle cx="580" cy="385" r="3" fill="#722F45"/>
+  <circle cx="700" cy="382" r="3" fill="#10B981"/>
+</svg>

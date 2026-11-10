@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#211B20"/>
+      <stop offset="60%" stop-color="#30282A"/>
+      <stop offset="100%" stop-color="#722F45"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogGrad)"/>
+
+  <!-- Architectural grid accents -->
+  <line x1="120" y1="0" x2="120" y2="630" stroke="#722F45" stroke-width="1.5" stroke-opacity="0.3"/>
+  <line x1="1080" y1="0" x2="1080" y2="630" stroke="#722F45" stroke-width="1.5" stroke-opacity="0.3"/>
+  <line x1="0" y1="140" x2="1200" y2="140" stroke="#722F45" stroke-width="1.5" stroke-opacity="0.2"/>
+
+  <!-- Monogram -->
+  <rect x="180" y="190" width="70" height="70" rx="16" fill="#722F45"/>
+  <text x="215" y="238" font-family="'Playfair Display', serif" font-weight="bold" font-size="32" fill="#F8F3EA" text-anchor="middle">AB</text>
+
+  <!-- Title & Subtitle -->
+  <text x="180" y="320" font-family="'Playfair Display', serif" font-weight="700" font-size="64" fill="#F8F3EA">Aruba Barmawar</text>
+  <text x="180" y="375" font-family="'DM Sans', sans-serif" font-weight="500" font-size="28" fill="#C49A80" letter-spacing="4">AI/ML &amp; FULL-STACK DEVELOPER</text>
+
+  <!-- Description -->
+  <text x="180" y="435" font-family="'DM Sans', sans-serif" font-size="20" fill="#E9DFD5" fill-opacity="0.8">Second Year Engineering Student • CSE (Data Science) • AITM, Bhatkal</text>
+  <text x="180" y="470" font-family="'DM Sans', sans-serif" font-size="18" fill="#C49A80">Python • Machine Learning • React • Node.js • PostgreSQL • Express • MongoDB</text>
+
+  <!-- Bottom Badge -->
+  <rect x="180" y="520" width="310" height="42" rx="21" fill="#722F45" fill-opacity="0.4" stroke="#722F45" stroke-width="1.5"/>
+  <circle cx="205" cy="541" r="5" fill="#10B981"/>
+  <text x="225" y="547" font-family="'DM Sans', sans-serif" font-weight="700" font-size="14" fill="#F8F3EA">AVAILABLE FOR INTERNSHIPS</text>
+</svg>

@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-burgundy: #722F45;
+  --color-cream: #F8F3EA;
+  --color-charcoal: #30282A;
+  --color-dramatic: #211B20;
+  --color-rose: #C49A80;
+  --color-beige: #E9DFD5;
+  --color-white: #FFFFFF;
+
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --primary-burgundy: #722F45;
+  --warm-cream: #F8F3EA;
+  --deep-charcoal: #30282A;
+  --dramatic-dark: #211B20;
+  --muted-rose: #C49A80;
+  --soft-beige: #E9DFD5;
+  --pure-white: #FFFFFF;
+}
+
+/* Base resets & typography */
+html {
+  font-family: var(--font-sans);
+  background-color: var(--warm-cream);
+  color: var(--deep-charcoal);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #211B20;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #722F45;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C49A80;
+}
+
+/* Utility to hide cursor when custom cursor is active on fine-pointer devices */
+@media (pointer: fine) {
+  body.custom-cursor-active {
+    cursor: none;
+  }
+  body.custom-cursor-active a,
+  body.custom-cursor-active button,
+  body.custom-cursor-active [role="button"],
+  body.custom-cursor-active input,
+  body.custom-cursor-active textarea {
+    cursor: none;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.edge-temp/
+.vercel/
+.env
+.env.*
+!.env.example
+*.log
+resume-source.html
+
+public/documents/resume (1).pdf

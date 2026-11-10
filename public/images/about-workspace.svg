@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <linearGradient id="abBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#211B20"/>
+      <stop offset="100%" stop-color="#30282A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="500" rx="16" fill="url(#abBg)"/>
+  
+  <!-- Subtle border -->
+  <rect x="1" y="1" width="598" height="498" rx="15" fill="none" stroke="#722F45" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Code window frame -->
+  <rect x="40" y="40" width="520" height="320" rx="10" fill="#1B161A" stroke="#722F45" stroke-width="1"/>
+  
+  <!-- Window Header -->
+  <rect x="40" y="40" width="520" height="38" rx="10" fill="#161215"/>
+  <circle cx="62" cy="59" r="5" fill="#722F45"/>
+  <circle cx="78" cy="59" r="5" fill="#C49A80"/>
+  <circle cx="94" cy="59" r="5" fill="#E9DFD5"/>
+  <text x="120" y="63" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">mindset.ts — AITM Bhatkal • CSE (Data Science)</text>
+
+  <!-- Code editor lines -->
+  <text x="65" y="110" font-family="monospace" font-size="12" fill="#C49A80">interface <tspan fill="#F8F3EA">DeveloperMindset</tspan> &#123;</text>
+  <text x="85" y="135" font-family="monospace" font-size="12" fill="#E9DFD5">developer: <tspan fill="#722F45">"Aruba Barmawar"</tspan>;</text>
+  <text x="85" y="160" font-family="monospace" font-size="12" fill="#E9DFD5">academicYear: <tspan fill="#C49A80">"Second Year"</tspan>; // CSE (Data Science)</text>
+  <text x="85" y="185" font-family="monospace" font-size="12" fill="#E9DFD5">institution: <tspan fill="#722F45">"AITM, Bhatkal"</tspan>;</text>
+  <text x="85" y="210" font-family="monospace" font-size="12" fill="#E9DFD5">focus: <tspan fill="#722F45">"AI/ML &amp; Full-Stack Development"</tspan>;</text>
+  <text x="85" y="235" font-family="monospace" font-size="12" fill="#C49A80">buildSoftware: <tspan fill="#F8F3EA">() =&gt; Promise&lt;MeaningfulImpact&gt;</tspan>;</text>
+  <text x="65" y="260" font-family="monospace" font-size="12" fill="#C49A80">&#125;</text>
+
+  <text x="65" y="295" font-family="monospace" font-size="12" fill="#722F45">// Driven by curiosity, transforming concepts into practical applications.</text>
+  <text x="65" y="320" font-family="monospace" font-size="12" fill="#E9DFD5">export const engineer = new AIMLFullStackDeveloper();</text>
+
+  <!-- Bottom stat cards -->
+  <rect x="40" y="380" width="160" height="80" rx="8" fill="#261E23" stroke="#722F45" stroke-width="0.8"/>
+  <text x="60" y="412" font-family="'Playfair Display', serif" font-weight="700" font-size="22" fill="#F8F3EA">Year 2</text>
+  <text x="60" y="435" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">Engineering Student</text>
+
+  <rect x="220" y="380" width="160" height="80" rx="8" fill="#261E23" stroke="#722F45" stroke-width="0.8"/>
+  <text x="240" y="412" font-family="'Playfair Display', serif" font-weight="700" font-size="22" fill="#F8F3EA">Data Science</text>
+  <text x="240" y="435" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">CSE Specialization</text>
+
+  <rect x="400" y="380" width="160" height="80" rx="8" fill="#261E23" stroke="#722F45" stroke-width="0.8"/>
+  <text x="420" y="412" font-family="'Playfair Display', serif" font-weight="700" font-size="22" fill="#F8F3EA">AI/ML &amp; Web</text>
+  <text x="420" y="435" font-family="'DM Sans', sans-serif" font-size="11" fill="#C49A80">Practical Applications</text>
+</svg>
