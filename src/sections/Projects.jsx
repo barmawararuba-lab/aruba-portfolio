@@ -147,7 +147,7 @@ export default function Projects() {
 
               {/* Project Editorial Information */}
               <div
-                className={`lg:col-span-6 space-y-6 ${
+                className={`lg:col-span-6 space-y-5 ${
                   isEven ? 'lg:order-1' : 'lg:order-2'
                 }`}
               >
@@ -170,20 +170,6 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* Overview & Problem Breakdown */}
-                <p className="text-sm sm:text-base text-[#E9DFD5]/80 leading-relaxed font-normal">
-                  {project.overview}
-                </p>
-
-                <div className="p-4 rounded-xl bg-[#30282A]/80 border border-[#722F45]/30 space-y-1.5 text-xs text-[#E9DFD5]/90">
-                  <strong className="text-[#F8F3EA] block font-mono text-[11px] uppercase tracking-wider">
-                    Problem &amp; Technical Approach:
-                  </strong>
-                  <p className="leading-relaxed">
-                    {project.technicalApproach}
-                  </p>
-                </div>
-
                 {/* Technology Badges */}
                 <div className="flex flex-wrap gap-2 pt-1">
                   {project.tags.map((tag) => (
@@ -196,7 +182,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Action Buttons: Render Live Demo & Source Code only when valid */}
+                {/* Action Buttons */}
                 <div className="flex flex-wrap items-center gap-3 pt-2">
                   {project.links.live && (
                     <MagneticButton
@@ -216,7 +202,7 @@ export default function Projects() {
                     onClick={() => handleOpenCaseStudy(project)}
                     className="text-xs"
                   >
-                    <span>Inspect Case Study</span>
+                    <span>Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </MagneticButton>
 

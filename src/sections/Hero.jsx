@@ -119,18 +119,18 @@ export default function Hero() {
             >
               <MagneticButton
                 variant="primary"
-                onClick={() => handleScrollTo('projects')}
+                onClick={() => handleScrollTo('contact')}
                 className="shadow-md"
               >
-                <span>Explore My Work</span>
+                <span>Get In Touch</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </MagneticButton>
 
               <MagneticButton
                 variant="outline"
-                onClick={() => handleScrollTo('contact')}
+                onClick={() => handleScrollTo('projects')}
               >
-                <span>Contact Me</span>
+                <span>View Projects</span>
               </MagneticButton>
             </motion.div>
 

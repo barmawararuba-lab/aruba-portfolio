@@ -353,78 +353,28 @@ export default function Skills() {
                   <p className="text-xs text-[#30282A]/70 font-medium max-w-md">{category.description}</p>
                 </div>
 
-                {/* Category Technology Badges: Icon + Clearly Visible Name */}
-                <div className="flex flex-wrap items-center gap-2.5 p-3 rounded-xl bg-[#FFFFFF] border border-[#E9DFD5]">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#722F45] font-semibold mr-1">
-                    Tech Stack:
-                  </span>
+                {/* Category Technology Badges: Icon + Clearly Visible Name — the primary display */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
                   {category.skills.map((skill) => {
                     const meta = getTechMeta(skill.name);
                     return (
                       <div
                         key={skill.name}
-                        className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F8F3EA] border border-[#E9DFD5] hover:border-[#722F45]/50 hover:shadow-2xs transition-all duration-200 cursor-default"
+                        className="group flex items-center gap-2.5 px-3.5 py-3 rounded-xl bg-[#FFFFFF] border border-[#E9DFD5] hover:border-[#722F45]/50 hover:shadow-sm transition-all duration-200 cursor-default"
                       >
                         <div
-                          className="w-4 h-4 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-110"
+                          className="w-6 h-6 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-110"
                           style={{ color: meta.color }}
                         >
                           {meta.svg}
                         </div>
-                        <span className="text-xs font-mono font-semibold text-[#30282A] group-hover:text-[#722F45] transition-colors whitespace-nowrap">
-                          {meta.shortName || skill.name}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* In-Depth Architectural Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {category.skills.map((skill) => {
-                    const meta = getTechMeta(skill.name);
-                    return (
-                      <div
-                        key={skill.name}
-                        className="group p-5 rounded-2xl bg-[#FFFFFF] border border-[#E9DFD5] hover:border-[#722F45]/60 transition-all duration-300 shadow-2xs hover:shadow-xs space-y-4 flex flex-col justify-between"
-                      >
-                        <div className="space-y-3">
-                          {/* Technology Logo + Name + Experience Level */}
-                          <div className="flex items-start justify-between gap-3">
-                            <div className="flex items-center gap-3 min-w-0">
-                              <div
-                                className="w-10 h-10 rounded-xl bg-[#F8F3EA] border border-[#E9DFD5] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-[#722F45]/40 transition-all duration-300 shadow-2xs"
-                                style={{ color: meta.color }}
-                              >
-                                {meta.svg}
-                              </div>
-                              <div className="min-w-0">
-                                <h4 className="font-serif text-lg text-[#30282A] group-hover:text-[#722F45] transition-colors font-semibold leading-snug">
-                                  {skill.name}
-                                </h4>
-                              </div>
-                            </div>
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-[#722F45]/10 text-[#722F45] border border-[#722F45]/20 shrink-0 mt-0.5">
-                              {skill.experienceLevel}
-                            </span>
-                          </div>
-
-                          {/* Technical Highlight */}
-                          <p className="text-xs text-[#30282A]/80 leading-relaxed font-normal">
-                            {skill.highlight}
-                          </p>
-                        </div>
-
-                        {/* Technology Sub-tags */}
-                        <div className="flex flex-wrap gap-1.5 pt-3 border-t border-[#E9DFD5]/60">
-                          {skill.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-[#F8F3EA] text-[#722F45] border border-[#E9DFD5]"
-                            >
-                              #{tag}
-                            </span>
-                          ))}
+                        <div className="min-w-0">
+                          <span className="text-xs font-mono font-semibold text-[#30282A] group-hover:text-[#722F45] transition-colors block leading-tight truncate">
+                            {meta.shortName || skill.name}
+                          </span>
+                          <span className="text-[10px] font-mono text-[#722F45]/70 block mt-0.5">
+                            {skill.experienceLevel}
+                          </span>
                         </div>
                       </div>
                     );
@@ -436,64 +386,12 @@ export default function Skills() {
         </AnimatePresence>
       </div>
 
-      {/* Complete Verified Technology Arsenal Across All Categories */}
-      <div className="p-6 sm:p-8 rounded-2xl bg-[#FFFFFF] border border-[#E9DFD5] space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#E9DFD5] pb-4">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#722F45]" />
-            <span className="text-xs font-mono uppercase tracking-widest font-semibold text-[#722F45]">
-              // Verified Technical Arsenal · All Categories
-            </span>
-          </div>
-          <span className="text-xs text-[#30282A]/60 font-mono">
-            19 Core Technologies with Official Logos
-          </span>
-        </div>
-
-        {/* Categories Grid of Authentic Icons with Names */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {skillCategories.map((cat) => (
-            <div key={cat.id} className="p-4 rounded-xl bg-[#F8F3EA]/60 border border-[#E9DFD5] space-y-3 flex flex-col justify-between">
-              <div className="flex items-center justify-between pb-2 border-b border-[#E9DFD5]/80">
-                <span className="text-xs font-bold text-[#30282A] font-serif">
-                  {cat.title}
-                </span>
-                <span className="text-[10px] font-mono text-[#722F45] bg-[#FFFFFF] px-2 py-0.5 rounded-full border border-[#E9DFD5]">
-                  {cat.skills.length} techs
-                </span>
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                {cat.skills.map((skill) => {
-                  const meta = getTechMeta(skill.name);
-                  return (
-                    <div
-                      key={skill.name}
-                      className="group flex items-center gap-2 p-2 rounded-lg bg-[#FFFFFF] border border-[#E9DFD5] hover:border-[#722F45]/50 hover:shadow-2xs transition-all duration-200 cursor-default"
-                    >
-                      <div
-                        className="w-5 h-5 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-110"
-                        style={{ color: meta.color }}
-                      >
-                        {meta.svg}
-                      </div>
-                      <span className="text-[11px] font-mono font-medium text-[#30282A] group-hover:text-[#722F45] transition-colors truncate">
-                        {meta.shortName || skill.name}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Zero Arbitrary Progress Bars Notice */}
       <div className="p-5 rounded-2xl bg-[#722F45]/5 border border-[#722F45]/20 flex items-start gap-3.5">
         <CheckCircle2 className="w-5 h-5 text-[#722F45] shrink-0 mt-0.5" />
         <div className="text-xs text-[#30282A]/85 leading-relaxed">
           <strong className="text-[#722F45] font-semibold">Zero Arbitrary Skill Percentages: </strong>
-          Capabilities are not measured by subjective progress meters. Technical credibility is proven through working source repositories, applied machine learning projects, and structured problem-solving documented in the Projects section.
+          Technical credibility is proven through working source repositories, applied machine learning projects, and structured problem-solving documented in the Projects section.
         </div>
       </div>
     </section>
