@@ -55,7 +55,7 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={fadeInVariants}
-          className="lg:col-span-5 space-y-5"
+          className="lg:col-span-5 space-y-5 w-full min-w-0"
         >
           {/* Secondary Visual Container */}
           <div className="relative rounded-2xl overflow-hidden border-2 border-[#722F45]/30 bg-[#211B20] shadow-lg group">
@@ -66,33 +66,33 @@ export default function About() {
               loading="lazy"
             />
             {/* Overlay Editorial Stamp */}
-            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#722F45] text-[#F8F3EA] text-[10px] font-mono tracking-widest uppercase shadow-sm">
+            <div className="absolute top-4 right-4 px-2 py-1 rounded-full bg-[#722F45] text-[#F8F3EA] text-[9px] sm:text-[10px] font-mono tracking-wider sm:tracking-widest uppercase shadow-sm max-w-[calc(100%-2rem)] truncate">
               ENGINEERING LOG // 2025
             </div>
           </div>
 
           {/* Quick Technical Summary Cards */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 rounded-2xl bg-[#FFFFFF] border border-[#E9DFD5] space-y-2 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-[#722F45]/10 text-[#722F45] flex items-center justify-center">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="p-3 sm:p-4 rounded-2xl bg-[#FFFFFF] border border-[#E9DFD5] space-y-2 shadow-2xs min-w-0">
+              <div className="w-8 h-8 rounded-lg bg-[#722F45]/10 text-[#722F45] flex items-center justify-center shrink-0">
                 <GraduationCap className="w-4 h-4" />
               </div>
-              <span className="block font-serif text-base text-[#30282A] font-semibold leading-snug">
+              <span className="block font-serif text-sm sm:text-base text-[#30282A] font-semibold leading-snug break-words">
                 CSE (Data Science)
               </span>
-              <p className="text-xs text-[#30282A]/70 leading-relaxed">
+              <p className="text-xs text-[#30282A]/70 leading-relaxed break-words">
                 2nd Year · AITM, Bhatkal
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#FFFFFF] border border-[#E9DFD5] space-y-2 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-[#722F45]/10 text-[#722F45] flex items-center justify-center">
+            <div className="p-3 sm:p-4 rounded-2xl bg-[#FFFFFF] border border-[#E9DFD5] space-y-2 shadow-2xs min-w-0">
+              <div className="w-8 h-8 rounded-lg bg-[#722F45]/10 text-[#722F45] flex items-center justify-center shrink-0">
                 <BrainCircuit className="w-4 h-4" />
               </div>
-              <span className="block font-serif text-base text-[#30282A] font-semibold leading-snug">
+              <span className="block font-serif text-sm sm:text-base text-[#30282A] font-semibold leading-snug break-words">
                 AI/ML &amp; Full-Stack
               </span>
-              <p className="text-xs text-[#30282A]/70 leading-relaxed">
+              <p className="text-xs text-[#30282A]/70 leading-relaxed break-words">
                 Building meaningful digital solutions
               </p>
             </div>
@@ -105,17 +105,17 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={fadeInVariants}
-          className="lg:col-span-7 space-y-6"
+          className="lg:col-span-7 space-y-6 w-full min-w-0"
         >
           {/* Main Statement Quote */}
-          <blockquote className="border-l-4 border-[#722F45] pl-5 py-1">
-            <p className="font-serif text-xl sm:text-2xl text-[#30282A] font-normal leading-snug">
-              "{profileData.tagline}"
+          <blockquote className="border-l-4 border-[#722F45] pl-4 sm:pl-5 py-1 min-w-0">
+            <p className="font-serif text-lg sm:text-xl md:text-2xl text-[#30282A] font-normal leading-snug break-words">
+              &ldquo;{profileData.tagline}&rdquo;
             </p>
           </blockquote>
 
           {/* Concise Bio — no repetition with Hero tagline */}
-          <div className="space-y-4 text-sm sm:text-base text-[#30282A]/85 leading-relaxed font-normal">
+          <div className="space-y-4 text-sm sm:text-base text-[#30282A]/85 leading-relaxed font-normal break-words">
             <p>
               I am an engineering student driven by curiosity and a passion for building meaningful technology — exploring how things work and transforming ideas into practical applications through AI, machine learning, and full-stack development.
             </p>
@@ -133,15 +133,15 @@ export default function About() {
               {[
                 { icon: Cpu, label: 'AI & Machine Learning' },
                 { icon: Code, label: 'Full-Stack Development' },
-                { icon: Database, label: 'Database Architecture' },
-                { icon: BookOpen, label: 'Data Science & Algorithms' },
+                { icon: Database, label: 'DB Architecture' },
+                { icon: BookOpen, label: 'Data Science' },
               ].map(({ icon: Icon, label }) => (
                 <div
                   key={label}
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#FFFFFF] border border-[#E9DFD5] text-xs font-medium text-[#30282A] shadow-2xs"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-full bg-[#FFFFFF] border border-[#E9DFD5] text-xs font-medium text-[#30282A] shadow-2xs"
                 >
                   <Icon className="w-3.5 h-3.5 text-[#722F45] shrink-0" />
-                  <span>{label}</span>
+                  <span className="whitespace-nowrap">{label}</span>
                 </div>
               ))}
             </div>

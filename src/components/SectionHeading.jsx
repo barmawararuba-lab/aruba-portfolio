@@ -50,7 +50,7 @@ export default function SectionHeading({
 
       <h2
         className={clsx(
-          'font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight leading-[1.15] mb-4',
+          'font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal tracking-tight leading-[1.15] mb-4 break-words',
           dark ? 'text-[#F8F3EA]' : 'text-[#30282A]'
         )}
       >
@@ -60,7 +60,7 @@ export default function SectionHeading({
       {description && (
         <p
           className={clsx(
-            'text-sm sm:text-base md:text-lg font-normal leading-relaxed',
+            'text-sm sm:text-base md:text-lg font-normal leading-relaxed break-words',
             dark ? 'text-[#E9DFD5]/80' : 'text-[#30282A]/80'
           )}
         >

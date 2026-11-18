@@ -224,25 +224,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Kinetic Scroll Down Indicator */}
-      <div className="relative z-10 flex flex-col items-center justify-center pt-8 text-[#722F45]/80 select-none">
-        <button
-          onClick={() => handleScrollTo('about')}
-          className="flex flex-col items-center gap-2 group cursor-pointer"
-          aria-label="Scroll down to About section"
-        >
-          <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#30282A]/60 group-hover:text-[#722F45] transition-colors">
-            Scroll to Explore
-          </span>
-          <div className="w-5 h-8 rounded-full border border-[#722F45]/50 flex items-start justify-center p-1 group-hover:border-[#722F45] transition-colors">
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-              className="w-1.5 h-1.5 rounded-full bg-[#722F45]"
-            />
-          </div>
-        </button>
-      </div>
     </section>
   );
 }
