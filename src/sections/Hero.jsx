@@ -1,16 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { profileData } from '../data/profile';
-import MagneticButton from '../components/MagneticButton';
 import { useReducedMotion } from '../hooks/useReducedMotion';
-import { 
-  ArrowRight, 
-  Mail, 
-  Sparkles, 
-  Code2, 
-  Terminal, 
-  ChevronDown 
-} from 'lucide-react';
+import { Mail, Terminal } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
 
 /**
@@ -26,13 +18,6 @@ import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
  */
 export default function Hero() {
   const prefersReducedMotion = useReducedMotion();
-
-  const handleScrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,7 +42,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex flex-col justify-between pt-28 sm:pt-36 pb-12 overflow-hidden"
+      className="relative min-h-[92vh] flex flex-col justify-center pt-28 sm:pt-36 pb-12 overflow-hidden"
     >
       {/* Background Architectural Accent Lines */}
       <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden opacity-30">
@@ -66,14 +51,14 @@ export default function Hero() {
         <div className="absolute top-1/3 left-0 right-0 h-[1px] bg-[#E9DFD5]" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 w-full relative z-10 my-auto">
+      <div className="max-w-6xl mx-auto px-6 w-full relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
         >
-          {/* Left Column: Editorial Positioning & Call to Actions */}
+          {/* Left Column: Editorial Positioning */}
           <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             {/* Internship Status Badge */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2.5">
@@ -101,7 +86,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-base sm:text-lg md:text-xl text-[#30282A]/85 font-normal leading-relaxed max-w-xl"
             >
-              "{profileData.tagline}"
+              &ldquo;{profileData.tagline}&rdquo;
             </motion.p>
 
             {/* Sub-text highlighting engineering & academic context */}
@@ -111,28 +96,6 @@ export default function Hero() {
             >
               Undergraduate engineer at {profileData.institution} • {profileData.academicStatus}.
             </motion.p>
-
-            {/* Interactive CTAs */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-wrap items-center gap-4 pt-2"
-            >
-              <MagneticButton
-                variant="primary"
-                onClick={() => handleScrollTo('contact')}
-                className="shadow-md"
-              >
-                <span>Get In Touch</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </MagneticButton>
-
-              <MagneticButton
-                variant="outline"
-                onClick={() => handleScrollTo('projects')}
-              >
-                <span>View Projects</span>
-              </MagneticButton>
-            </motion.div>
 
             {/* Social Quick Links */}
             <motion.div

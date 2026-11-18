@@ -25,7 +25,7 @@ export default function App() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="min-h-screen bg-[#F8F3EA] text-[#30282A] selection:bg-[#722F45] selection:text-[#F8F3EA]">
+    <div className="min-h-screen bg-[#F8F3EA] text-[#30282A] selection:bg-[#722F45] selection:text-[#F8F3EA] overflow-x-hidden">
       {/* Cinematic Custom Interactive Cursor (Desktop Fine-Pointer Only) */}
       <CustomCursor />
 
