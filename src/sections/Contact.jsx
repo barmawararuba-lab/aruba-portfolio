@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 p-7 sm:p-10 md:p-14 rounded-[2.5rem] bg-gradient-to-br from-[#722F45] via-[#431B29] to-[#211B20] text-[#F8F3EA] border border-[#722F45]/60 shadow-2xl space-y-12"
+      className="scroll-mt-24 p-5 sm:p-10 md:p-14 rounded-3xl sm:rounded-[2.5rem] bg-gradient-to-br from-[#722F45] via-[#431B29] to-[#211B20] text-[#F8F3EA] border border-[#722F45]/60 shadow-2xl space-y-8 sm:space-y-12"
     >
       {/* ── Top Header & Context Row ── */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-[#722F45]/50 pb-8">

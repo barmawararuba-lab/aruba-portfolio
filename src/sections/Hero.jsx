@@ -42,7 +42,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex flex-col justify-center pt-28 sm:pt-36 pb-12 overflow-hidden"
+      className="relative min-h-[88vh] sm:min-h-[92vh] flex flex-col justify-center pt-24 sm:pt-36 pb-8 sm:pb-12 overflow-hidden"
     >
       {/* Background Architectural Accent Lines */}
       <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden opacity-30">
@@ -72,11 +72,11 @@ export default function Hero() {
             </motion.div>
 
             {/* Oversized Editorial Name & Title */}
-            <motion.div variants={itemVariants} className="space-y-2">
-              <span className="block text-xs sm:text-sm font-mono tracking-[0.25em] uppercase text-[#722F45] font-semibold">
+            <motion.div variants={itemVariants} className="space-y-1.5 sm:space-y-2">
+              <span className="block text-xs sm:text-sm font-mono tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#722F45] font-semibold">
                 {profileData.title}
               </span>
-              <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight text-[#30282A] leading-[1.05]">
+              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight text-[#30282A] leading-[1.1] sm:leading-[1.05] break-words">
                 {profileData.name}
               </h1>
             </motion.div>

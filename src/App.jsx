@@ -10,7 +10,6 @@ import About from './sections/About';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
-import Resume from './sections/Resume';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
@@ -42,7 +41,7 @@ export default function App() {
       <Marquee variant="burgundy" />
 
       {/* Main Editorial & Engineering Sections Flow */}
-      <main className="max-w-6xl mx-auto px-6 py-16 space-y-28">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-16 sm:space-y-24 lg:space-y-28 w-full min-w-0 box-border">
         {/* About Me Section */}
         <About />
 
@@ -54,9 +53,6 @@ export default function App() {
 
         {/* Professional Experience & Highlights */}
         <Experience />
-
-        {/* Dedicated Resume Download Experience */}
-        <Resume />
 
         {/* Contact Section */}
         <Contact />

@@ -154,7 +154,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.28, ease: 'easeInOut' }}
-            className="fixed inset-0 z-40 bg-[#211B20]/95 backdrop-blur-xl md:hidden flex flex-col justify-between p-8 pt-24 text-[#F8F3EA]"
+            className="fixed inset-0 z-40 bg-[#211B20]/95 backdrop-blur-xl md:hidden flex flex-col justify-between p-6 sm:p-8 pt-20 sm:pt-24 text-[#F8F3EA] overflow-y-auto"
           >
             {/* Navigation Links */}
             <div className="space-y-4">

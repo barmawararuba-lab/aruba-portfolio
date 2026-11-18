@@ -38,17 +38,17 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="scroll-mt-24 space-y-12 py-8" style={{ width: '100%', boxSizing: 'border-box' }}>
+    <section id="about" className="scroll-mt-24 space-y-8 sm:space-y-12 py-6 sm:py-8" style={{ width: '100%', boxSizing: 'border-box' }}>
       {/* Editorial Section Introduction */}
       <SectionHeading
         badge="Personal Narrative"
-        subtitle="Identity & Mindset"
-        title="Curiosity, Engineering & Modern Innovation"
+        subtitle="Identity &amp; Mindset"
+        title="Curiosity, Engineering &amp; Modern Innovation"
         description="Second Year undergraduate in CSE (Data Science) at AITM, Bhatkal — exploring AI/ML and full-stack development to build practical software."
       />
 
       {/* Asymmetric Editorial Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
         {/* Left Column: Visual Secondary Frame & Metric Highlights */}
         <motion.div
           initial="hidden"

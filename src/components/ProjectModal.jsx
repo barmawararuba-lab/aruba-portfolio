@@ -128,18 +128,18 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               {/* Top Banner: Project Title & Quick Actions */}
               <div className="space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-4">
-                  <div className="space-y-1.5">
-                    <div className="flex items-center gap-2.5">
+                  <div className="space-y-1.5 min-w-0 max-w-full">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
                       <ModalStatusBadge
                         status={project.statusBadge}
                         statusType={project.statusType}
                       />
                       <span className="text-xs font-mono text-[#C49A80]/70">• {project.year}</span>
                     </div>
-                    <h2 id="case-study-title" className="font-serif text-3xl sm:text-4xl text-[#F8F3EA]">
+                    <h2 id="case-study-title" className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#F8F3EA] break-words">
                       {project.title}
                     </h2>
-                    <p className="text-sm sm:text-base text-[#C49A80] font-medium mt-1">
+                    <p className="text-sm sm:text-base text-[#C49A80] font-medium mt-1 break-words">
                       {project.subtitle}
                     </p>
                   </div>

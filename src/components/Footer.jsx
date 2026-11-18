@@ -95,8 +95,7 @@ export default function Footer() {
               <a href="#skills" className="hover:text-[#722F45] transition-colors">03 / Skills</a>
               <a href="#projects" className="hover:text-[#722F45] transition-colors">04 / Projects</a>
               <a href="#experience" className="hover:text-[#722F45] transition-colors">05 / Experience</a>
-              <a href="#resume" className="hover:text-[#722F45] transition-colors">06 / Resume</a>
-              <a href="#contact" className="hover:text-[#722F45] transition-colors">07 / Contact</a>
+              <a href="#contact" className="hover:text-[#722F45] transition-colors">06 / Contact</a>
             </div>
           </div>
 

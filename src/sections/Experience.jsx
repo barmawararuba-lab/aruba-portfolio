@@ -59,11 +59,11 @@ export default function Experience() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="experience" className="scroll-mt-24 space-y-12 py-4">
+    <section id="experience" className="scroll-mt-24 space-y-8 sm:space-y-12 py-4">
       <SectionHeading
         badge="Professional Experience"
         subtitle="Verified Background"
-        title="Experience & Highlights"
+        title="Experience &amp; Highlights"
         description="Professional internship and national-level hackathon achievements — practical experience beyond the classroom."
       />
 
@@ -82,7 +82,7 @@ export default function Experience() {
               {/* Left accent bar */}
               <div className={`absolute left-0 top-0 bottom-0 w-1 ${item.accentColor} rounded-l-2xl`} />
 
-              <div className="pl-8 pr-6 sm:pr-8 py-7 sm:py-8 flex flex-col sm:flex-row gap-6">
+              <div className="pl-6 sm:pl-8 pr-5 sm:pr-8 py-6 sm:py-8 flex flex-col sm:flex-row gap-5 sm:gap-6">
                 {/* Icon + Meta column */}
                 <div className="shrink-0 flex flex-row sm:flex-col items-center sm:items-start gap-4 sm:gap-3 sm:w-40">
                   <div className={`w-12 h-12 rounded-xl ${item.accentColor} flex items-center justify-center shrink-0`}>
