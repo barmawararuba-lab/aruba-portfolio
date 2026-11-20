@@ -9,8 +9,7 @@ import {
   Database, 
   Layers, 
   ShieldCheck, 
-  Cpu, 
-  Terminal 
+  Cpu,
 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import MagneticButton from './MagneticButton';
@@ -184,15 +183,6 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     </span>
                   ))}
                 </div>
-              </div>
-
-              {/* Cover Preview Image */}
-              <div className="rounded-2xl overflow-hidden border border-[#722F45]/40 bg-[#211B20]">
-                <img
-                  src={project.coverImage}
-                  alt={`${project.title} Interface Preview`}
-                  className="w-full h-auto max-h-[380px] object-cover"
-                />
               </div>
 
               {/* Problem vs. Solution Editorial Matrix */}

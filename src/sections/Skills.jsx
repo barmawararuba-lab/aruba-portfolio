@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import SectionHeading from '../components/SectionHeading';
 import { skillCategories } from '../data/skills';
-import { useReducedMotion } from '../hooks/useReducedMotion';
 import {
   Code2,
   Server,
   Database,
   Wrench,
-  CheckCircle2,
   Layers,
   Cpu,
   Brain,
@@ -195,36 +192,17 @@ const techMeta = {
       </svg>
     ),
   },
-  'Postman': {
-    name: 'Postman',
-    shortName: 'Postman',
-    color: '#FF6C37',
-    svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M12.986 2.054c.712.115 1.564.444 2.09.805 1.018.7 1.487 1.597 1.487 2.849 0 .848-.27 1.58-.838 2.261-.418.5-.96.883-1.637 1.157-.348.14-.52.247-.542.336-.044.18.067.436.312.724.316.372.935.918 1.954 1.724 1.83 1.446 2.839 2.457 3.524 3.525.688 1.074.887 2.072.636 3.197-.245 1.1-.96 2.083-2.077 2.846-1.07.732-2.35 1.168-3.79 1.293-1.636.142-3.14-.14-4.524-.847-1.385-.707-2.39-1.742-2.97-3.07-.375-.858-.466-1.73-.284-2.73.196-1.075.76-2.03 1.745-2.956.34-.32.348-.344.209-.597-.107-.197-.183-.435-.195-.611-.02-.275.053-.526.24-.827.26-.418.713-.88 1.258-1.282.352-.26.39-.323.23-.39-.51-.212-.977-.552-1.34-.984-.526-.626-.782-1.332-.78-2.158.005-.96.347-1.77 1.025-2.43.682-.663 1.56-1.07 2.578-1.201.558-.073 1.393-.058 1.93.033zm-.96 1.92c-.675.115-1.265.46-1.64.958-.335.443-.456.96-.367 1.55.086.574.37 1.037.822 1.346.408.28.9.417 1.516.422.617.006 1.11-.122 1.53-.396.47-.306.77-.77.86-1.333.1-.62-.03-1.17-.38-1.61-.39-.49-1-.83-1.72-.96-.18-.03-.44-.04-.62-.02zm-.2 8.76c-.4.07-.84.28-1.25.61-.63.5-1.06 1.16-1.24 1.88-.17.69-.09 1.38.25 2.05.37.74.99 1.32 1.8 1.68.79.35 1.64.45 2.54.29.98-.18 1.76-.66 2.33-1.42.53-.71.74-1.5.6-2.29-.14-.78-.58-1.47-1.25-1.95-.59-.42-1.3-.7-2.09-.81-.46-.07-1.24-.09-1.69-.04z" />
-      </svg>
-    ),
+  'Next.js': {
+    name: 'Next.js', shortName: 'Next.js', color: '#111111',
+    svg: <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M8 16V8l8 8V8" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
   },
-  'Vite & Tooling': {
-    name: 'Vite & Tooling',
-    shortName: 'Vite',
-    color: '#646CFF',
-    svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M19.96 2.07c-.12 0-.24.03-.35.09L2.83 10.9a.86.86 0 00-.4.99c.1.28.34.48.64.53l6.57 1.17.48 6.44c.03.35.25.65.58.77a.88.88 0 00.91-.2l10.02-9.69a.87.87 0 00.17-.98.86.86 0 00-.8-.54h-5.26l4.63-7.07c.18-.28.16-.64-.04-.9-.1-.13-.23-.2-.37-.2z" />
-      </svg>
-    ),
+  'TypeScript': {
+    name: 'TypeScript', shortName: 'TypeScript', color: '#3178C6',
+    svg: <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2" fill="currentColor"/><text x="12" y="16" textAnchor="middle" fontSize="9" fontWeight="700" fill="white">TS</text></svg>,
   },
-  'Linux & Terminal': {
-    name: 'Linux & Terminal',
-    shortName: 'Linux & CLI',
-    color: '#FCC624',
-    svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-        <polyline points="4 17 10 11 4 5" />
-        <line x1="12" y1="19" x2="20" y2="19" />
-      </svg>
-    ),
+  'Prisma ORM': {
+    name: 'Prisma ORM', shortName: 'Prisma', color: '#2D3748',
+    svg: <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true"><path d="M8.2 2.6a1.5 1.5 0 0 1 2.5.1l10.2 16a1.5 1.5 0 0 1-1.3 2.3H5.3a1.5 1.5 0 0 1-1.3-2.2z" fill="currentColor"/><path d="m9.8 7.2 6.1 10.2-8.4 1.4z" fill="white"/></svg>,
   },
 };
 
@@ -248,13 +226,9 @@ function getTechMeta(skillName) {
   );
 }
 
-/**
- * Interactive Technical Skills & Architecture Showcase
- * Displays authentic technology logos with clearly visible names across EVERY category.
- */
+/** Compact technology and architecture overview with existing category filters. */
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const prefersReducedMotion = useReducedMotion();
 
   const tabs = [
     { id: 'all', label: 'All', icon: Layers, count: skillCategories.reduce((acc, cat) => acc + cat.skills.length, 0) },
@@ -271,127 +245,69 @@ export default function Skills() {
       : skillCategories.filter((cat) => cat.id === activeCategory);
 
   return (
-    <section id="skills" className="scroll-mt-24 space-y-12 py-8">
-      {/* Section Header */}
+    <section id="skills" className="scroll-mt-24 space-y-8 py-8">
       <SectionHeading
-        badge="Verified Capabilities"
-        subtitle="Technical Arsenal"
-        title={
-          <span className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2">
-              <Brain className="w-8 h-8 text-[#722F45] transition-transform duration-300 hover:scale-110" />
-              <span>AI/ML</span>
-            </span>
-            <span className="text-[#30282A]/30 font-light">&amp;</span>
-            <span className="inline-flex items-center gap-2">
-              <Layers className="w-8 h-8 text-[#722F45] transition-transform duration-300 hover:scale-110" />
-              <span>Full-Stack</span>
-            </span>
-          </span>
-        }
-        description="Domain competencies developed through practical software engineering, independent projects, and data science coursework. Every technology is backed by working code and authentic tools."
+        badge="Skills"
+        subtitle="Tools I use"
+        title="Technology &amp; Architecture"
+        description="A focused set of technologies used across my projects and data science work."
       />
 
-      {/* Category Filter Tabs */}
-      <div className="flex items-center justify-start sm:justify-center overflow-x-auto pb-2 -mx-2 px-2 no-scrollbar">
-        <div className="flex items-center gap-1.5 p-1.5 rounded-full bg-[#FFFFFF] border border-[#E9DFD5] shadow-2xs">
-          {tabs.map((tab) => {
-            const Icon = tab.icon;
-            const isActive = activeCategory === tab.id;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveCategory(tab.id)}
-                className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-colors whitespace-nowrap cursor-pointer select-none ${
-                  isActive ? 'text-[#F8F3EA]' : 'text-[#30282A]/70 hover:text-[#722F45]'
-                }`}
-              >
-                {isActive && (
-                  <motion.div
-                    layoutId="activeSkillCategory"
-                    className="absolute inset-0 bg-[#722F45] rounded-full z-0"
-                    transition={{ type: 'spring', damping: 25, stiffness: 280 }}
-                  />
-                )}
-                <Icon className="w-3.5 h-3.5 relative z-10" />
-                <span className="relative z-10">{tab.label}</span>
-                <span
-                  className={`relative z-10 px-1.5 py-0.5 rounded-full text-[10px] font-mono ${
-                    isActive ? 'bg-[#FFFFFF]/20 text-[#F8F3EA]' : 'bg-[#E9DFD5]/60 text-[#722F45]'
-                  }`}
-                >
-                  {tab.count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter technologies by category">
+        {tabs.map((tab) => {
+          const Icon = tab.icon;
+          const isActive = activeCategory === tab.id;
+          return (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setActiveCategory(tab.id)}
+              aria-pressed={isActive}
+              className={isActive ? 'inline-flex items-center gap-1.5 rounded-full border border-[#722F45] bg-[#722F45] px-3 py-1.5 text-xs font-medium text-[#F8F3EA]' : 'inline-flex items-center gap-1.5 rounded-full border border-[#E9DFD5] bg-white px-3 py-1.5 text-xs font-medium text-[#30282A]/75 hover:border-[#722F45]/50'}
+            >
+              <Icon className="h-3.5 w-3.5" aria-hidden="true" />{tab.label}
+              <span className="font-mono text-[10px] opacity-70">{tab.count}</span>
+            </button>
+          );
+        })}
       </div>
 
-      {/* Skills Grid Organized by Category */}
-      <div className="space-y-12">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeCategory}
-            initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -12 }}
-            transition={{ duration: 0.35, ease: 'easeInOut' }}
-            className="space-y-12"
-          >
-            {displayedCategories.map((category) => (
-              <div key={category.id} className="space-y-6">
-                {/* Category Header */}
-                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-[#E9DFD5] pb-3">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#722F45]" />
-                    <h3 className="font-serif text-xl sm:text-2xl text-[#30282A] font-semibold">{category.title}</h3>
-                    <span className="px-2 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-[#E9DFD5]/60 text-[#722F45]">
-                      {category.skills.length} Technologies
-                    </span>
-                  </div>
-                  <p className="text-xs text-[#30282A]/70 font-medium max-w-md">{category.description}</p>
-                </div>
-
-                {/* Category Technology Badges: Icon + Clearly Visible Name — the primary display */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
-                  {category.skills.map((skill) => {
-                    const meta = getTechMeta(skill.name);
-                    return (
-                      <div
-                        key={skill.name}
-                        className="group flex items-center gap-2.5 px-3.5 py-3 rounded-xl bg-[#FFFFFF] border border-[#E9DFD5] hover:border-[#722F45]/50 hover:shadow-sm transition-all duration-200 cursor-default"
-                      >
-                        <div
-                          className="w-6 h-6 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-110"
-                          style={{ color: meta.color }}
-                        >
-                          {meta.svg}
-                        </div>
-                        <div className="min-w-0">
-                          <span className="text-xs font-mono font-semibold text-[#30282A] group-hover:text-[#722F45] transition-colors block leading-tight truncate">
-                            {meta.shortName || skill.name}
-                          </span>
-                          <span className="text-[10px] font-mono text-[#722F45]/70 block mt-0.5">
-                            {skill.experienceLevel}
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+      <div className="space-y-5">
+        {displayedCategories.map((category) => (
+          <div key={category.id} className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <h3 className="w-32 shrink-0 font-serif text-base font-semibold text-[#30282A]">{category.title}</h3>
+            <div className="flex flex-wrap items-center gap-2">
+              {category.skills.map((skill) => {
+                const meta = getTechMeta(skill.name);
+                return (
+                  <span
+                    key={skill.name}
+                    title={skill.name}
+                    role="img"
+                    aria-label={skill.name}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#E9DFD5] bg-white text-[#722F45] shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#722F45]/50"
+                  >
+                    <span style={{ color: meta.color }} aria-hidden="true">{meta.svg}</span>
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
 
-      {/* Zero Arbitrary Progress Bars Notice */}
-      <div className="p-5 rounded-2xl bg-[#722F45]/5 border border-[#722F45]/20 flex items-start gap-3.5">
-        <CheckCircle2 className="w-5 h-5 text-[#722F45] shrink-0 mt-0.5" />
-        <div className="text-xs text-[#30282A]/85 leading-relaxed">
-          <strong className="text-[#722F45] font-semibold">Zero Arbitrary Skill Percentages: </strong>
-          Technical credibility is proven through working source repositories, applied machine learning projects, and structured problem-solving documented in the Projects section.
+      <div className="border-t border-[#E9DFD5] pt-5">
+        <h3 className="mb-3 font-serif text-base font-semibold text-[#30282A]">Architecture</h3>
+        <div className="flex flex-wrap gap-2">
+          {[
+            { icon: Code2, label: 'Web Development' },
+            { icon: Database, label: 'Database Design' },
+            { icon: Layers, label: 'Scalable Systems' },
+          ].map(({ icon: Icon, label }) => (
+            <span key={label} className="inline-flex items-center gap-2 rounded-lg border border-[#E9DFD5] bg-white/70 px-3 py-2 text-xs text-[#30282A]/80">
+              <Icon className="h-4 w-4 text-[#722F45]" aria-hidden="true" />{label}
+            </span>
+          ))}
         </div>
       </div>
     </section>

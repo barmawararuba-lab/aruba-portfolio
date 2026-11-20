@@ -13,7 +13,7 @@ export const projectsData = [
   {
     id: "rental-tracker",
     title: "Rental Tracker",
-    subtitle: "Property Rental, Tenant & Financial Management Web Platform",
+    subtitle: "Rental and tenant management",
     category: "Full-Stack Web Application",
     status: "Live Web App",
     statusBadge: "Live Web App",
@@ -23,9 +23,9 @@ export const projectsData = [
     isPrimary: true,
     accentColor: "#C49A80",
     coverImage: "/images/projects/rental-tracker.svg",
-    tags: ["Next.js", "TypeScript", "Prisma ORM", "PostgreSQL", "Cloudinary", "Recharts", "Tailwind CSS"],
+    tags: ['Next.js', 'TypeScript', 'Prisma ORM', 'PostgreSQL'],
     
-    overview: "A deployed property rental management web platform built to simplify multi-unit property administration, tenant records, lease timeline tracking, and payment accounting for landlords and property managers.",
+    overview: "A web app for managing rental units, tenants, leases and payments.",
     
     problem: "Independent property managers frequently depend on fragmented spreadsheets, handwritten ledgers, and manual messaging to track active leases, fluctuating rent dues, and unit vacancy rates.",
     
@@ -71,7 +71,7 @@ export const projectsData = [
   {
     id: "nexus-crime",
     title: "NEXUS-CRIME (AXIOM)",
-    subtitle: "AI-Powered Criminal Network Analysis & Knowledge Graph System",
+    subtitle: "Criminal network analysis",
     category: "AI/ML & Investigative System",
     status: "In Progress",
     statusBadge: "In Progress",
@@ -81,9 +81,9 @@ export const projectsData = [
     isPrimary: false,
     accentColor: "#722F45",
     coverImage: "/images/projects/nexus-crime.svg",
-    tags: ["AI/ML", "Knowledge Graphs", "Network Analysis", "Python", "React", "Node.js"],
+    tags: ['Python', 'React', 'Node.js', 'Knowledge Graphs'],
     
-    overview: "An AI-powered investigative intelligence platform developed by Team AXIOM for Smart India Hackathon (Problem Statement SIH26189). Designed to analyze complex criminal networks, link heterogeneous intelligence sources, and map syndicate relationships.",
+    overview: "A Smart India Hackathon project exploring criminal network links with graph analysis.",
     
     problem: "Investigative agencies handle fragmented records across call detail logs, surveillance imagery, vehicle registries, and case reports, making it difficult to uncover syndicate hierarchies and non-obvious inter-suspect connections.",
     
@@ -129,7 +129,7 @@ export const projectsData = [
   {
     id: "fixit-campus",
     title: "FixIt Campus",
-    subtitle: "Campus Infrastructure Issue Reporting & Geospatial Resolution Platform",
+    subtitle: "Campus issue reporting",
     category: "Full-Stack Web Application",
     status: "Prototype",
     statusBadge: "Prototype",
@@ -139,9 +139,9 @@ export const projectsData = [
     isPrimary: false,
     accentColor: "#C49A80",
     coverImage: "/images/projects/fixit-campus.svg",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Leaflet", "Tailwind CSS"],
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Leaflet'],
     
-    overview: "A campus maintenance issue reporting prototype structured around an end-to-end Report → Track → Resolve workflow. Demonstrates how students and facility staff can log, locate, and monitor physical infrastructure repairs.",
+    overview: "A campus issue reporting prototype with ticket tracking and map-based locations.",
     
     problem: "Campus maintenance issues (damaged lab equipment, electrical faults, plumbing leaks, structural repairs) are often reported informally, leading to lost requests, lack of transparency, and delayed resolutions.",
     
@@ -186,7 +186,7 @@ export const projectsData = [
   {
     id: "ai-resume-screening",
     title: "AI Resume Screening & Ranking System",
-    subtitle: "AI-Powered Recruitment Platform & Candidate Evaluation Engine",
+    subtitle: "Resume screening and ranking",
     category: "AI/ML & Full-Stack System",
     status: "Working Project · Not Deployed",
     statusBadge: "Working Project · Not Deployed",
@@ -196,9 +196,9 @@ export const projectsData = [
     isPrimary: false,
     accentColor: "#722F45",
     coverImage: "/images/projects/resume-screening.svg",
-    tags: ["Python", "Machine Learning", "NLP", "Scikit-Learn", "React", "Node.js", "Tailwind CSS"],
+    tags: ['Python', 'Scikit-Learn', 'NLP', 'React', 'Node.js'],
     
-    overview: "A functional recruitment evaluation system operating in a development environment. Parses resumes, extracts relevant skills, predicts candidate job categories using machine learning, and ranks applicant profiles objectively.",
+    overview: "A resume screening tool that extracts skills, predicts job categories and ranks candidates.",
     
     problem: "Hiring teams receive large volumes of unstructured resumes for technical positions, making manual resume screening time-consuming, prone to fatigue, and subject to inconsistent evaluation criteria.",
     

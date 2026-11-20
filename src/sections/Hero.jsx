@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { profileData } from '../data/profile';
 import { useReducedMotion } from '../hooks/useReducedMotion';
-import { Mail, Terminal } from 'lucide-react';
+import { Mail, BrainCircuit, Code2, Database } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
 
 /**
@@ -10,8 +10,8 @@ import { GithubIcon, LinkedinIcon } from '../components/SocialIcons';
  * 
  * Features:
  * - Oversized Playfair Display editorial typography
- * - Integrated architectural portrait frame with geometric badge overlays
- * - Live glowing SDE internship availability badge
+ * - Profile portrait in a restrained frame
+ * - Internship availability indicator
  * - Asymmetric layout balancing high-fashion minimalism with engineering credibility
  * - Magnetic interactive CTAs and social links
  * - Refined kinetic scroll indicator
@@ -42,7 +42,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[88vh] sm:min-h-[92vh] flex flex-col justify-center pt-24 sm:pt-36 pb-8 sm:pb-12 overflow-hidden"
+      className="relative min-h-[88vh] lg:min-h-screen flex flex-col justify-center pt-24 sm:pt-28 pb-8 sm:pb-10 overflow-hidden"
     >
       {/* Background Architectural Accent Lines */}
       <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden opacity-30">
@@ -56,18 +56,15 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center"
         >
           {/* Left Column: Editorial Positioning */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             {/* Internship Status Badge */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2.5">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#722F45]/10 text-[#722F45] border border-[#722F45]/20 shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
                 <span className="tracking-wide">{profileData.availability.status}</span>
-              </span>
-              <span className="hidden sm:inline-block text-xs font-mono text-[#30282A]/60">
-                // {profileData.academicStatus}
               </span>
             </motion.div>
 
@@ -76,7 +73,7 @@ export default function Hero() {
               <span className="block text-xs sm:text-sm font-mono tracking-[0.2em] sm:tracking-[0.25em] uppercase text-[#722F45] font-semibold">
                 {profileData.title}
               </span>
-              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight text-[#30282A] leading-[1.1] sm:leading-[1.05] break-words">
+              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-normal tracking-tight text-[#30282A] leading-[1.1] sm:leading-[1.05] break-words">
                 {profileData.name}
               </h1>
             </motion.div>
@@ -89,13 +86,21 @@ export default function Hero() {
               &ldquo;{profileData.tagline}&rdquo;
             </motion.p>
 
-            {/* Sub-text highlighting engineering & academic context */}
-            <motion.p
-              variants={itemVariants}
-              className="text-xs sm:text-sm text-[#30282A]/70 leading-relaxed max-w-lg border-l-2 border-[#722F45]/40 pl-4 py-0.5"
-            >
-              Undergraduate engineer at {profileData.institution} • {profileData.academicStatus}.
+            <motion.p variants={itemVariants} className="text-sm text-[#30282A]/70 leading-relaxed max-w-lg">
+              Second-year CSE (Data Science) student at {profileData.institution}.
             </motion.p>
+
+            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2" aria-label="Core focus">
+              {[
+                { icon: BrainCircuit, label: 'AI & Machine Learning' },
+                { icon: Code2, label: 'Full-Stack Development' },
+                { icon: Database, label: 'Data Science' },
+              ].map(({ icon: Icon, label }) => (
+                <span key={label} className="inline-flex items-center gap-1.5 rounded-full border border-[#E9DFD5] bg-white/70 px-3 py-1.5 text-[11px] font-medium text-[#30282A]/80">
+                  <Icon className="h-3.5 w-3.5 text-[#722F45]" aria-hidden="true" />{label}
+                </span>
+              ))}
+            </motion.div>
 
             {/* Social Quick Links */}
             <motion.div
@@ -156,32 +161,8 @@ export default function Hero() {
                   loading="eager"
                 />
 
-                {/* Atmospheric gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#211B20] via-transparent to-transparent opacity-50 pointer-events-none" />
-
-                {/* Top Corner Technical Stamp */}
-                <div className="absolute top-4 left-4 px-2.5 py-1 rounded-md bg-[#211B20]/80 backdrop-blur-md border border-[#722F45]/50 text-[10px] font-mono text-[#C49A80] uppercase tracking-wider flex items-center gap-1.5">
-                  <Terminal className="w-3 h-3 text-[#722F45]" />
-                  <span>2ND YR • CSE (DATA SCIENCE)</span>
-                </div>
-
-                {/* Bottom Overlay Badge */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#211B20]/90 backdrop-blur-md border border-[#722F45]/40 text-[#F8F3EA] space-y-1">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-[#C49A80]">
-                    <span>AITM BHATKAL</span>
-                    <span>CSE (DATA SCIENCE)</span>
-                  </div>
-                  <p className="text-xs text-[#E9DFD5]/90 font-medium">
-                    Exploring AI, machine learning and full-stack development to build meaningful digital experiences.
-                  </p>
-                </div>
               </div>
 
-              {/* Floating Architectural Coordinates */}
-              <div className="hidden sm:flex items-center justify-between mt-3 text-[10px] font-mono text-[#722F45]/70 tracking-widest uppercase">
-                <span>COORD // {profileData.location}</span>
-                <span>STATUS // AI/ML &amp; SDE CANDIDATE</span>
-              </div>
             </div>
           </motion.div>
         </motion.div>

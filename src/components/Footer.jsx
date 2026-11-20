@@ -1,41 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { profileData } from '../data/profile';
 import MagneticButton from './MagneticButton';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
-import { ArrowUp, Mail, Heart, Globe, Terminal } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 
 /**
  * Editorial Studio Closing Footer
  * 
- * Features:
- * - Dynamic live ticking local time clock
- * - Smooth "Back to Top" scroll action
- * - Quick anchor navigation and social links
- * - Minimalist engineering manifesto
+ * Footer navigation, social links, and back-to-top action.
  */
 export default function Footer() {
-  const [currentTime, setCurrentTime] = useState('');
-
-  // Live ticking local time clock
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      // Format as 12-hour with seconds and AM/PM
-      setCurrentTime(
-        now.toLocaleTimeString('en-US', {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: true,
-        })
-      );
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -56,19 +30,11 @@ export default function Footer() {
               <span className="font-serif font-bold text-xl text-[#30282A] tracking-tight block">
                 {profileData.name}
               </span>
-              <span className="text-xs text-[#722F45] font-medium tracking-wide">
-                {profileData.title} • {profileData.academicStatus}
-              </span>
+              <span className="text-xs text-[#722F45] font-medium tracking-wide">{profileData.title}</span>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            {/* Live Clock */}
-            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E9DFD5] text-xs font-mono text-[#30282A]/80 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>LOCAL: {currentTime || '12:00:00 PM'}</span>
-            </div>
-
             {/* Back to top magnetic button */}
             <MagneticButton
               variant="outline"
@@ -83,36 +49,25 @@ export default function Footer() {
         </div>
 
         {/* Middle Tier: Navigation Links & Social Media */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs">
           {/* Column 1: Index Links */}
           <div className="space-y-3">
             <span className="font-mono text-[11px] uppercase tracking-widest text-[#722F45] font-semibold block">
-              // Navigation Index
+              Navigation
             </span>
             <div className="grid grid-cols-2 gap-2 text-[#30282A]/80">
-              <a href="#hero" className="hover:text-[#722F45] transition-colors">01 / Home</a>
-              <a href="#about" className="hover:text-[#722F45] transition-colors">02 / About</a>
-              <a href="#skills" className="hover:text-[#722F45] transition-colors">03 / Skills</a>
-              <a href="#projects" className="hover:text-[#722F45] transition-colors">04 / Projects</a>
-              <a href="#experience" className="hover:text-[#722F45] transition-colors">05 / Experience</a>
-              <a href="#contact" className="hover:text-[#722F45] transition-colors">06 / Contact</a>
+              <a href="#hero" className="hover:text-[#722F45] transition-colors">Home</a>
+              <a href="#skills" className="hover:text-[#722F45] transition-colors">Skills</a>
+              <a href="#projects" className="hover:text-[#722F45] transition-colors">Projects</a>
+              <a href="#experience" className="hover:text-[#722F45] transition-colors">Experience</a>
+              <a href="#contact" className="hover:text-[#722F45] transition-colors">Contact</a>
             </div>
           </div>
 
-          {/* Column 2: Academic & Focus Context */}
+          {/* Profiles & Contact */}
           <div className="space-y-3">
             <span className="font-mono text-[11px] uppercase tracking-widest text-[#722F45] font-semibold block">
-              // Academic &amp; Engineering Focus
-            </span>
-            <p className="text-[#30282A]/80 leading-relaxed font-normal">
-              {profileData.department} at {profileData.institution}. Driven by curiosity, exploring the intersection of AI, machine learning and full-stack development to build practical digital experiences.
-            </p>
-          </div>
-
-          {/* Column 3: Profiles & Contact */}
-          <div className="space-y-3">
-            <span className="font-mono text-[11px] uppercase tracking-widest text-[#722F45] font-semibold block">
-              // Connect &amp; Network
+              Connect
             </span>
             <div className="flex flex-col space-y-2 text-[#30282A]/80">
               <a
@@ -147,11 +102,9 @@ export default function Footer() {
         {/* Bottom Tier: Manifesto & Copyright */}
         <div className="pt-8 border-t border-[#E9DFD5] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-[#30282A]/60">
           <div>
-            © {new Date().getFullYear()} {profileData.name}. All engineering rights reserved.
+            © {new Date().getFullYear()} {profileData.name}.
           </div>
-          <div className="flex items-center gap-2">
-            <span>Built with React 19, Tailwind v4, Motion, GSAP &amp; Lenis</span>
-          </div>
+
         </div>
       </div>
     </footer>

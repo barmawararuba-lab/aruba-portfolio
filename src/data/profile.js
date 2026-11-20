@@ -8,7 +8,7 @@ export const profileData = {
   initials: "AB",
   title: "AI/ML & Full-Stack Developer",
   role: "AI/ML & Full-Stack Developer",
-  tagline: "Exploring the intersection of AI, machine learning and full-stack development to turn ideas into meaningful digital experiences.",
+  tagline: "Building intelligent solutions through AI, machine learning and full-stack development.",
   academicStatus: "Second Year Engineering Student • CSE (Data Science)",
   institution: "Anjuman Institute of Technology and Management, Bhatkal",
   department: "Department of Computer Science and Engineering (Data Science)",
@@ -22,12 +22,11 @@ export const profileData = {
   },
 
   bio: {
-    hero: "Exploring the intersection of AI, machine learning and full-stack development to turn ideas into meaningful digital experiences.",
-    short: "I am an engineering student driven by curiosity and a passion for building meaningful technology. I enjoy exploring how things work, experimenting with new ideas, and transforming concepts into practical applications through AI, machine learning and full-stack development.",
+    hero: "Building intelligent solutions through AI, machine learning and full-stack development.",
+    short: "I’m a Computer Science and Engineering (Data Science) student at Anjuman Institute of Technology and Management, Bhatkal. I build web applications and explore practical machine learning projects.",
     long: [
-      "I am an engineering student driven by curiosity and a passion for building meaningful technology. I enjoy exploring how things work, experimenting with new ideas, and transforming concepts into practical applications through AI, machine learning and full-stack development.",
-      "Currently pursuing my undergraduate studies in Computer Science and Engineering (Data Science) at Anjuman Institute of Technology and Management, Bhatkal, I am dedicated to building solid foundations across data structures, algorithms, machine learning models, and modern full-stack web architectures.",
-      "I believe in continuous learning, hands-on experimentation, and building practical digital solutions that solve real-world problems with elegance and efficiency."
+      "I’m a Computer Science and Engineering (Data Science) student at Anjuman Institute of Technology and Management, Bhatkal.",
+      "I build web applications and explore practical machine learning projects."
     ]
   },
 

@@ -6,7 +6,6 @@ import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Marquee from './components/Marquee';
-import About from './sections/About';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
@@ -41,10 +40,7 @@ export default function App() {
       <Marquee variant="burgundy" />
 
       {/* Main Editorial & Engineering Sections Flow */}
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-16 sm:space-y-24 lg:space-y-28 w-full min-w-0 box-border">
-        {/* About Me Section */}
-        <About />
-
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 sm:space-y-16 lg:space-y-20 w-full min-w-0 box-border">
         {/* Technical Skills Showcase */}
         <Skills />
 
